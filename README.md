@@ -28,7 +28,7 @@ pip install streamlit
 ## Usage
 1. Clone this repository or copy the code to your local machine.
 ```
-git clone <repository-url>
+git clone https://github.com/MLVoyager3791/Calculator.git
 ```
 2. Navigate to the directory containing the code.
 ```
