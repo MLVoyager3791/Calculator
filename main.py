@@ -3,31 +3,37 @@ import math
 
 # Function to perform basic arithmetic operations
 def calculate(operation, num1, num2=0):
-    if operation == "Addition":
-        return num1 + num2
-    elif operation == "Subtraction":
-        return num1 - num2
-    elif operation == "Multiplication":
-        return num1 * num2
-    elif operation == "Division":
-        if num2 == 0:
-            return "Error: Division by zero"
-        return num1 / num2
-    elif operation == "Square Root":
-        if num1 < 0:
-            return "Error: Negative number"
-        return math.sqrt(num1)
-    elif operation == "Exponentiation":
-        return num1 ** num2
-    elif operation == "Sine":
-        return math.sin(math.radians(num1))
-    elif operation == "Cosine":
-        return math.cos(math.radians(num1))
-    elif operation == "Tangent":
-        return math.tan(math.radians(num1))
+    try:
+        if operation == "Addition":
+            return num1 + num2
+        elif operation == "Subtraction":
+            return num1 - num2
+        elif operation == "Multiplication":
+            return num1 * num2
+        elif operation == "Division":
+            if num2 == 0:
+                return "Error: Division by zero"
+            return num1 / num2
+        elif operation == "Square Root":
+            if num1 < 0:
+                return "Error: Negative number"
+            return math.sqrt(num1)
+        elif operation == "Exponentiation":
+            return num1 ** num2
+        elif operation == "Sine":
+            return math.sin(math.radians(num1))
+        elif operation == "Cosine":
+            return math.cos(math.radians(num1))
+        elif operation == "Tangent":
+            return math.tan(math.radians(num1))
+        else:
+            return "Error: Invalid operation"
+    except Exception as e:
+        return f"Error: {str(e)}"
 
 # Main function to run the Streamlit app
 def main():
+    st.set_page_config(page_title="Calculator")
     st.title("Calculator")
 
     st.sidebar.title("Calculator Options")
