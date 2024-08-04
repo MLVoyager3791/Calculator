@@ -38,7 +38,8 @@ cd <repository-directory>
 ```sh
 streamlit run main.py
 ```
-4. Once the app is running, Streamlit will provide a local URL (usually http://localhost:8501). Open this URL in your web browser to use the calculator app.
+4. Once the app is running, Streamlit will provide a local URL (usually http://localhost:8501). Open this URL in your web browser to use the calculator app.\
+Alternatively, you can visit the deployed version of the app at: [Calculator](https://calculator-01.streamlit.app/)
 
 ## Code Explanation
 #### **Functions**
